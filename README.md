@@ -2,9 +2,16 @@
 
 
 
-### 합의 알고리즘
+### 합의 알고리즘과 성능
+- PoW
+- PoS
+- PoA
+
 ### 대용량 블록체인 트랜잭션 처리
+- 샤딩
+
 ### 이더리움 트랜잭션 파리이버시 보장
+- ZK-Snark
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
