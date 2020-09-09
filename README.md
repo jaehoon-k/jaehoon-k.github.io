@@ -4,7 +4,7 @@
 
 ### 합의 알고리즘과 성능
 - PoW
-- PoS
+- PoS (Casper)
 - PoA
 
 ### 대용량 블록체인 트랜잭션 처리
@@ -12,6 +12,7 @@
 
 ### 이더리움 트랜잭션 파리이버시 보장
 - ZK-Snark
+- 영지시 증명(ZKP, Zero-knowlege Proofs)
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
