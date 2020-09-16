@@ -44,7 +44,6 @@ Casper 로 명명된 이더리움 2.0 의 PoS 합의 알고리즘은 네트워�
 ### 이더리움 트랜잭션 파리이버시 보호
 > 블록체인은 네트워크 참여자에게 모든 원장을 공개하고 공유함으로써 데이터의 위변조를 막을 수 있다. 따라서 데이터가 공개되는 블록체인과 데이터를 감추고자 하는 프라이버시 보호 기능은 언뜻 상충하는 것으로 보인다. 그러나 블록체인의 탈중앙화를 보다 안전하게 실현하는데 프라이버시 보호 기능이 중요한 역할을 할 수 있다.
 
-영지시 증명(ZKP, Zero-knowlege Proofs)은 
-- ZK-SNARKs
-- ZK-STARKs
+영지식 증명(ZKP, Zero-knowlege Proofs)의 목표는 증명자(Prover)가 알고 있는 증거(Witness)를 검증자(Verifier) 또는 다른 어느 누구에게도 노출하지 않은 상태에서, 증명자가 증거를 알고 있다고 검증자에게 확신 시키는 것이다. 영지식 증명을 블록체인에 적용한 가장 잘 알려진 사례는 Zcash 와 이에 적용된 zk-SNARK(Zero-Knowledge Succinct Non-interactive Argument of Knowledge) 를 들 수 있다. zk-SNARK 는 영지식 증명을 보다 간결하고 비간섭적으로 사용할 수 있도록 변형한 형태이다. zk-SNARK 을 이용하면 트랜잭션의 페이로드(예를 들어 이더의 전송자, 수신자, 전송 금액 등)를 노출 하지 않은채 트랜잭션을 전송하는 것이 가능해진다. 이를 통해 이더리움 네트워크의 익명성과 프라이버시를 강화할 수 있다. zk-SNARK 는 세 가지 알고리즘인 Key Generator : G, Prover : P, Verfier : V 로 구성된다. 이중 Key Generator 는 비밀 파라미터인 Lamda 를 이용해서 두 개의 공개 키인 Proveing Key : pk 와 Verification Key : vk 를 생성하는데 이용된다. 그런데 lamda 가 노출되면 누구든지 lamda 를 이용해서 증거(witness)를 알지 못하는 상태에서 거짓 증명(Fake Proof) 를 만들어낼 수 있다. 따라서 lamda 는 절대로 누출 되어서는 안되며 이때문에 Zcash 또한 다자간 계산 방식(Powers of tau ceremony)을 통해 pk 와 vk 를 생성했다.
+- ZK-STARK
 
