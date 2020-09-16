@@ -50,6 +50,8 @@ zk-SNARK 는 영지식 증명을 보다 간결하고 비간섭적으로 사용�
 
 zk-SNARK 는 세 가지 알고리즘인 Key Generator : G, Prover : P, Verfier : V 로 구성된다. 이중 Key Generator 는 비밀 파라미터인 Lamda 를 이용해서 두 개의 공개 키인 Proveing Key : pk 와 Verification Key : vk 를 생성하는데 이용된다. 그런데 lamda 가 노출되면 누구든지 lamda 를 이용해서 증거(witness)를 알지 못하는 상태에서 거짓 증명(Fake Proof) 를 만들어낼 수 있다. 따라서 lamda 는 절대로 누출 되어서는 안되며 이때문에 Zcash 또한 다자간 계산 방식(Powers of tau ceremony)을 통해 pk 와 vk 를 생성했다.
 
+이러한 초기 설정의 어려움은 zk-SNARK 의 단점으로 지적되며 이를 극복 하고자 하는 또 다른 시도가 주목 받고 있다.
 
-- ZK-STARK
+zk-STARK 는 Zero-Knowledge Scalable Transparent Argument Knowledge 의 약자고 영지식 증명을 zk-SNARK 에 비해 더 빠르고 저렴하게 구현해 낼 수 있으며 무엇보다 까다로운 초기 설정 없이도 영지식 증명 적용이 가능하다. 이는 zk-STARK 가 충돌저항성 해시함수에 기반한 선형 암호화 기술을 사용하고 있으며 암호학 측면에서 보다 간단한 구조를 가지고 있기 때문이다. 반면, zk-STARK 는 zk-SNARK 에 비해 증명 데이터를 만드는데 더 많은 데이터 용량을 필요로 한다는 단점을 가지고 있다. 
 
+zk-SNARK 와 zk-STARK 모두 아직 완성된 기술이라고 볼수는 없으나 앞으로 단점들을 보완해 나간다면 블록체인의 익명성과 프라이버시 향상에 커다란 역할을 할 것으로 기대된다.
